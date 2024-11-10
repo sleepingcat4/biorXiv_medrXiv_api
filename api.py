@@ -22,7 +22,7 @@ def fetch_articles(api_template, server, cursor=0, fetch_all=True):
 
         time.sleep(1)
 
-        if not fetch_all or len(all_articles) >= 100:
+        if not fetch_all and len(all_articles) >= 100:
             break
 
     return all_articles
